@@ -1,5 +1,9 @@
 pipeline{
   agent any
+  parameters{
+    string(name: 'BRANCH_NAME')
+    string(name: 'SLEEP_TIME')
+    string(name: 'APP_PORT')
   //options {
     //skipDefaultCheckout()  // Prevents automatic full checkout
   //}
