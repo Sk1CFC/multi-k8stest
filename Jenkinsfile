@@ -11,7 +11,7 @@ pipeline{
       steps{
         echo "${params.BRANCH_NAME}"
         echo "Building....."
-        bat "timeout /t ${params.SLEEP_TIME}"
+        sleep "time: ${params.SLEEP_TIME}, unit: 'SECONDS'"
       }
     }
     stage('Test'){
