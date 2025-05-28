@@ -16,7 +16,7 @@ pipeline{
     stage('Test'){
       steps{
         echo "Testing....."
-        sh "echo "testing on port ${params.PORT_NO}""
+        bat "echo "testing on port ${params.APP_PORT}""
       }
     }
     stage('Deploy'){
