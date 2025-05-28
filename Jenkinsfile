@@ -1,5 +1,5 @@
 pipeline{
-  agent any
+  //agent any
   //options {
     //skipDefaultCheckout()  // Prevents automatic full checkout
   //}
@@ -7,7 +7,7 @@ pipeline{
     maven 'M399'
   }
   stages{
-    //agent{ label 'mymachine' }
+    agent any
     stage('Build'){
       steps{
         echo "Building....."
