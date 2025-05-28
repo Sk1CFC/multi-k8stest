@@ -1,5 +1,5 @@
 pipeline{
-  agent none
+  agent any
   //options {
     //skipDefaultCheckout()  // Prevents automatic full checkout
   //}
@@ -8,14 +8,15 @@ pipeline{
   }
   stages{
     stage('Build'){
-      agent{ label 'mymachine' }
       steps{
         echo "Building....."
+        sh "sleep ${params.SLEEP_TIME}"
       }
     }
     stage('Test'){
       steps{
         echo "Testing....."
+        sh "echo "testing on port ${params.PORT_NO}""
       }
     }
     stage('Deploy'){
