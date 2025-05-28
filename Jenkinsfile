@@ -9,7 +9,7 @@ pipeline{
   stages{
     stage('Build'){
       steps{
-        echo "{params.BRANCH_NAME}"
+        echo "${params.BRANCH_NAME}"
         echo "Building....."
         bat "timeout /t ${params.SLEEP_TIME} /nobreak"
       }
