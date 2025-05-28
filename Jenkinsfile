@@ -3,7 +3,7 @@ pipeline{
   parameters{
     string(name: 'BRANCH_NAME')
     string(name: 'SLEEP_TIME')
-    string(name: 'APP_PORT')
+    string(name: 'APP_PORTS')
   }
   //options {
     //skipDefaultCheckout()  // Prevents automatic full checkout
