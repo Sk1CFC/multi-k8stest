@@ -1,5 +1,5 @@
 pipeline{
-  //agent any
+  agent none
   //options {
     //skipDefaultCheckout()  // Prevents automatic full checkout
   //}
