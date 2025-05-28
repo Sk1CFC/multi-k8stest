@@ -8,7 +8,7 @@ pipeline{
   }
   stages{
     stage('Build'){
-      agent{ label 'mymachine' }
+      agent any
       steps{
         echo "Building....."
       }
