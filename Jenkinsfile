@@ -7,7 +7,7 @@ pipeline{
     maven 'M399'
   }
   stages{
-    agent{ label 'mymachine' }
+    //agent{ label 'mymachine' }
     stage('Build'){
       steps{
         echo "Building....."
