@@ -3,6 +3,9 @@ pipeline{
   //options {
     //skipDefaultCheckout()  // Prevents automatic full checkout
   //}
+  tools{
+    maven 'M399'
+  }
   stages{
     stage('Build'){
       steps{
