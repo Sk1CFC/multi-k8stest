@@ -11,7 +11,7 @@ pipeline{
       steps{
         echo "${params.BRANCH_NAME}"
         echo "Building....."
-        sleep "time: ${params.SLEEP_TIME}, unit: 'SECONDS'"
+        echo "${params.SLEEP_TIME}"
       }
     }
     stage('Test'){
