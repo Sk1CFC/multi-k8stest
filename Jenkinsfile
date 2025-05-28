@@ -10,7 +10,7 @@ pipeline{
     stage('Build'){
       steps{
         echo "Building....."
-        sh "sleep ${params.SLEEP_TIME}"
+        bat "timeout /t ${params.SLEEP_TIME} /nobreak"
       }
     }
     stage('Test'){
