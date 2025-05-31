@@ -17,6 +17,7 @@ pipeline{
         echo "${params.BRANCH_NAME}"
         echo "Building....."
         echo "${params.SLEEP_TIME}"
+        echo "${env.PATH}"
       }
     }
     stage('Test'){
