@@ -18,6 +18,7 @@ pipeline{
         echo "Building....."
         echo "${params.SLEEP_TIME}"
         echo "${env.PATH}"
+        echo "${env.TEST}"
       }
     }
     stage('Test'){
