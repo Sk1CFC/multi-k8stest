@@ -1,5 +1,5 @@
 pipeline{
-  //agent any
+  agent none
   parameters{
     string(name: 'BRANCH_NAME')
     string(name: 'SLEEP_TIME')
