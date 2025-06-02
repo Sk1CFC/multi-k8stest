@@ -1,5 +1,5 @@
 pipeline{
-  agent any
+  //agent any
   parameters{
     string(name: 'BRANCH_NAME')
     string(name: 'SLEEP_TIME')
@@ -13,6 +13,7 @@ pipeline{
   }
   stages{
     stage('Build'){
+      agent any
       steps{
         echo "${params.BRANCH_NAME}"
         echo "Building....."
