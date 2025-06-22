@@ -1,0 +1,25 @@
+name: Test workflow for terraform
+on:
+  push:
+    branches: ["main"]
+jobs:
+  Deploy:
+    name: Terraform deployment
+    runs-on: ubuntu
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Setup terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.7.5
+      - name: Terraform format check
+        run: terraform fmt
+      - name: Initialize terraform configuration directory
+        run: terraform init
+      - name: Validate the configuration
+        run: terraform validate
+      - name: Plan the changes
+        run: terraform plan
+      - name: Apply the changes
+        run: terraform apply
